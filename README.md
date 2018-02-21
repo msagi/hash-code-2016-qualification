@@ -27,7 +27,7 @@ This is an example solution for the Google Hash Code 2016 qualification round ch
 3. The optimal solution to this problem is NP-hard, therefore the generic approach is to use heuristics (brute force would take too long). There are lots of algorithms 
  (heuristics) tries to cut the calculation times but they are not necessarily provide the optimal solution (e.g. a specific algorithm gives good solution to input A but 
  less than optimal to input B). There are multiple open source 3rd party libraries
- (solvers) addressing this issue (e.g. [JSprit](https://jsprit.github.io/) or [OptaPlanner](https://docs.optaplanner.org) but I chose not to use them, so
+ (solvers) addressing this issue (e.g. [jsprit](https://jsprit.github.io/) or [OptaPlanner](https://www.optaplanner.org/) but I chose not to use them, so
     1. I can learn more by solving this issue on my own
     1. In order to quickly and effectively use a 3rd party library, you have to be familiar with it already, learning it during the competition is very risky (sometimes they don't address
    your problem directly and tweaking them can take long time).
@@ -102,14 +102,16 @@ This is an example solution for the Google Hash Code 2016 qualification round ch
 
 9. I implemented two algorithm, the 'Dumb' and the 'Greedy'. The dumb does not have any optimisation at all just iterates through the orders. 
  The greedy has greedy heuristics trying to optimise the model before processing the orders. Here are the statistics for the two algorithms:
-    
-| Algorithm | Input | Score | Comment |
-| --- | --- |    
-| Dumb | Busy day in | 55335 | baseline |
-| Greedy | Busy day in | 98361 | +77% |
-| Dumb | Mother of all Warehouses | 59141 | baseline |
-| Greedy | Mother of all Warehouses | 73826 | +25% |
-| Dumb | Redundancy | 76234 | baseline |
-| Greedy | Redundancy | 94635 | +24% |
+
+```    
+| Algorithm | Input                    | Score | Comment  |
+| --------- | ------------------------ | ----- | -------- | 
+| Dumb      | Busy day in              | 55335 |          |
+| Greedy    | Busy day in              | 98361 | +77%     |
+| Dumb      | Mother of all Warehouses | 59141 |          |
+| Greedy    | Mother of all Warehouses | 73826 | +25%     |
+| Dumb      | Redundancy               | 76234 |          |
+| Greedy    | Redundancy               | 94635 | +24%     |
+```
 
 **I hope it helps you to learn the best practices to follow on a coding competition such as Google Hash Code. Enjoy!**
